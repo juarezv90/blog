@@ -1,0 +1,12 @@
+
+@mixin mdscrn {
+    @media (min-width:38rem) and (max-width:63rem) {
+        @content;
+    }
+};
+
+@mixin lgscrn {
+    @media (min-width:63rem) {
+        @content;
+    }
+}

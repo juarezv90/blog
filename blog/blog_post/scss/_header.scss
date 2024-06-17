@@ -1,0 +1,77 @@
+@import "variables.scss";
+
+
+header {
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(240, 240, 240 / 1);
+
+    .logo {
+        width: 100%;
+        height: 5rem;
+        background-color: rgba(220, 220, 220 / 1);
+        padding: 2rem;
+
+        h1 {
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+
+    nav.navFS {
+        height: 3rem;
+        width: 100%;
+        font-size: 1.25rem;
+        padding-top: 1rem;
+
+        ul {
+            margin:0 auto;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            padding: 0;
+            gap: 1rem;
+        }
+    }
+
+    @include mdscrn {
+
+        nav.navFS {
+            ul {
+                gap:3rem;
+
+                li:nth-child(2){
+                    margin-right: 1rem;
+                }
+                li:nth-child(3){
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    @include lgscrn {
+
+        .logo {
+            padding: 1rem;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        nav.navFS {
+            ul {
+                gap:4rem;
+
+                li:nth-child(2){
+                    margin-right: 1.5rem;
+                }
+                li:nth-child(3){
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
