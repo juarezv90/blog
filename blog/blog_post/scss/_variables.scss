@@ -1,12 +1,21 @@
+$primary:#ccd9e2;
+$cta:#b6c2d0;
+$secondary:#687c80;
+$lighter:#d2e1e8;
+$sand:#b5ac9d;
+
+
+
+
 
 @mixin mdscrn {
-    @media (min-width:38rem) and (max-width:63rem) {
+    @media (min-width:744px) and (max-width:1439px) {
         @content;
     }
 };
 
 @mixin lgscrn {
-    @media (min-width:63rem) {
+    @media (min-width:1440px) {
         @content;
     }
 }

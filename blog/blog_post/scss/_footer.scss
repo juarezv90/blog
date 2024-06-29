@@ -1,12 +1,26 @@
-footer {
-    width: 100%;
-    height: 3rem;
-    background-color: rgba(240, 240, 240 / 1);
-    display: flex;
-    align-items: end;
-    padding: 0 1rem;
+@import "./variables";
 
-    .copyright{
-        margin-left: auto;
+footer {
+    position: relative;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    .socials {
+        display: flex;
+        gap: 1rem;
     }
+
+    @include mdscrn {
+        flex-direction: row;
+    }
+    @include lgscrn {
+        flex-direction: row;
+    }
+
+
 }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+        <div class="logotext">
+            <h1>Coffee</h1>
+            <h1>Coded</h1>
+            <div class="backdrop"></div>
+        </div>
+
+
+        <nav>
+            <button class="sub_btn">
+                Subscribe
+            </button>
+
+            <div class="burger" id="burger" onclick="handleBurgerClick(this)">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <ul class="mobile_menu" id="menu" style="height: 0;">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Latest Post</a></li>
+                    <li><a href="">Recommended</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </div>
+
+            <ul class="reg_menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Latest Post</a></li>
+                <li><a href="">Recommended</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section class="welcome">
+            <article>
+                <h3>Welcome to the Cafe</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolores voluptas quaerat debitis velit
+                    minus perferendis doloribus odit eos? Possimus amet id laboriosam deleniti ducimus impedit debitis
+                    architecto est perspiciatis!</p>
+            </article>
+            <img src="static/binarycup.svg" alt="" width="332" height="264">
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="socials">
+            <img src="static/github.svg" alt="" srcset="">
+            <img src="static/overflow.svg" alt="" srcset="">
+            <img src="static/twitter.svg" alt="" srcset="">
+        </div>
+        <span class="copyright">Copyright&copy;2024 Victor Visciglia-Juarez</span>
+    </footer>
+
+</body>
+<script>
+    const handleBurgerClick = (e) => {
+        const menu = document.getElementById("menu")
+        const items = document.getElementById("burger").children
+
+        items[0].classList.toggle("hover1")
+        items[1].classList.toggle("hover2")
+        items[2].classList.toggle("hover3")
+        if (menu.style.height != "0px") {
+            menu.style.height = "0px"
+        } else {
+            menu.style.height = "14rem"
+        }
+    }
+</script>
+
+
+</html>

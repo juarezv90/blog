@@ -2,15 +2,55 @@
 
 
 <header>
-    <div class="logo">
-        <h1>Juarez Blogger</h1>
+
+    <div class="logotext">
+        <h1>Coffee</h1>
+        <h1>Coded</h1>
+        <div class="backdrop"></div>
     </div>
-    <nav class="navFS">
-        <ul>
+
+
+    <nav>
+        <button class="sub_btn">
+            Subscribe
+        </button>
+
+        <div class="burger" id="burger" onclick="handleBurgerClick(this)">
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <ul class="mobile_menu" id="menu" style="height: 0;">
+                <li><a href="">Home</a></li>
+                <li><a href="">Latest Post</a></li>
+                <li><a href="">Recommended</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </div>
+
+        <ul class="reg_menu">
             <li><a href="">Home</a></li>
-            <li><a href="">Newest</a></li>
+            <li><a href="">Latest Post</a></li>
+            <li><a href="">Recommended</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Login</a></li>
         </ul>
     </nav>
+
+    <script>
+        const handleBurgerClick = (e) => {
+            const menu = document.getElementById("menu")
+            const items = document.getElementById("burger").children
+    
+            items[0].classList.toggle("hover1")
+            items[1].classList.toggle("hover2")
+            items[2].classList.toggle("hover3")
+            if (menu.style.height != "0px") {
+                menu.style.height = "0px"
+            } else {
+                menu.style.height = "14rem"
+            }
+        }
+    </script>
+
 </header>

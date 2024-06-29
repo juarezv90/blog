@@ -1,0 +1,67 @@
+@import "./variables";
+
+section.welcome {
+    padding: 2rem;
+
+    h3 {
+        font-size: 1.75rem;
+        font-weight: 200;
+    }
+
+    p {
+        padding-left: 2rem;
+    }
+
+    img {
+        margin-top: 2rem;
+    }
+
+    @include mdscrn {
+        margin: 96px 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+
+        article {
+            margin-left: -42px;
+
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            p {
+                padding-left: 4rem;
+            }
+        }
+    }
+
+    @include lgscrn {
+        margin: 6.5rem 11.5rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+
+
+        article {
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                padding: 0;
+            }
+        }
+
+
+        img {
+            margin: 0;
+            width: 421px;
+            height: 335px;
+        }
+    }
+}
