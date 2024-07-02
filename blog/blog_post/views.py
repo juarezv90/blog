@@ -5,4 +5,4 @@ from . import serializers
 # Create your views here.
 
 def Index(request):
-    return render(request, "base.html", {})
+    return render(request, "home.html", {})

@@ -41,7 +41,7 @@ section.welcome {
         margin: 6.5rem 11.5rem;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 2rem;
 
@@ -54,6 +54,7 @@ section.welcome {
 
             p {
                 padding: 0;
+                width:80ch;
             }
         }
 
