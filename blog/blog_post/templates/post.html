@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form id="post-form" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const quillEditor = document.querySelector('.django-quill-widget');
+            if (!quillEditor) {
+                console.error("Quill editor not found");
+                return;
+            }
+
+            const quill = quillEditor.__quill;
+    
+            if (!quill) {
+                console.error("Quill instance not found");
+                return;
+            }
+
+            quill.getModule('toolbar').addHandler('image', function() {
+                selectLocalImage();
+                console.log("this is a working function now");
+            });
+
+            function selectLocalImage() {
+                const input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+                input.click();
+
+                input.onchange = function() {
+                    const file = input.files[0];
+                    if (/^image\//.test(file.type)) {
+                        saveToServer(file);
+                    } else {
+                        console.warn('You could only upload images.');
+                    }
+                };
+            }
+
+            function saveToServer(file) {
+                const fd = new FormData();
+                fd.append('image', file);
+
+                fetch('{% url "upload_image" %}', {
+                    method: 'POST',
+                    body: fd,
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.url) {
+                        insertToEditor(data.url);
+                    } else {
+                        console.error('Failed to upload image');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+
+            function insertToEditor(url) {
+                const range = quill.getSelection();
+                quill.insertEmbed(range.index, 'image', url);
+            }
+
+            document.getElementById('post-form').onsubmit = function() {
+                document.querySelector('input[name=content]').value = quill.root.innerHTML;
+            };
+        })
+
+    </script>
+    <button type="submit">Post</button>
+</form>
+
+{% endblock content %}

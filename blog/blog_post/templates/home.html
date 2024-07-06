@@ -11,140 +11,14 @@
 </section>
 
 <section id="posts">
+    {% for post in posts %}
     <article>
-        <img src="./static/placeholder400x400.png" alt="">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
+        <img src="{{ post.post_image }}" alt="">
+        <h3>{{ post.title }}</h3>
+        <p class="publish">Published: {{ post.post_date }}</p>
+        {{ post.blog_post.html|safe }}
     </article>
-    <article>
-        <img src="./static/placeholder400x400.png" alt="" class="postImage">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
-    </article>
-    <article>
-        <img src="./static/placeholder400x400.png" alt="">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
-    </article>
-    <article>
-        <img src="./static/placeholder400x400.png" alt="">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
-    </article>
-    <article>
-        <img src="./static/placeholder400x400.png" alt="">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
-    </article>
-    <article>
-        <img src="./static/placeholder400x400.png" alt="">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
-    </article>
-    <article>
-        <img src="./static/placeholder400x400.png" alt="">
-        <h3>Header</h3>
-        <p class="publish">Published September 12, 2024</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit aperiam error. Veniam tempore
-            accusamus sed? Consequatur, esse! Voluptas, fugit. Maxime esse, placeat aliquid repudiandae
-            recusandae soluta eligendi atque praesentium.
-            Consequatur delectus aliquid in at maiores nulla saepe, eaque ducimus natus earum quam, fuga unde
-            qui eos explicabo quasi labore sapiente! Eius officiis iure a nihil eum minus dolorem explicabo.
-            Rerum exercitationem impedit doloribus, quos ipsa aliquam suscipit inventore? Dolorum consectetur
-            placeat quae aspernatur quasi quo odit totam quibusdam, et architecto accusamus sunt quisquam
-            cupiditate veritatis. Recusandae est ipsa nam!
-            Vitae ex suscipit, cumque eveniet commodi fuga temporibus fugit, quasi libero quod numquam
-            perspiciatis deleniti enim facere sit fugiat blanditiis doloremque mollitia labore inventore. Quis
-            nulla iusto asperiores repudiandae modi.</p>
-        <div class="tags">
-            <span>Tag1</span><span>Tag2</span><span>Tag3</span>
-        </div>
-    </article>
-
+    {% endfor %}
 </section>
 
 {% endblock content %}

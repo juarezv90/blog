@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_quill',
     'rest_framework',
     'livereload',
     'blog_post',
@@ -135,7 +136,24 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+MEDIA_URL ='/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+QUILL_CONFIGS = {
+    'default': {
+        'theme':'snow',
+        'modules':{
+            'toolbar':[
+                [{'header':[1,2,False] }],
+                ['bold','italic','underline'],
+                ['image','code-block'],
+                [{'list':'ordered'},{'list':'bullet'}, {'list':'check'}]
+            ]
+        }
+    }
+}
