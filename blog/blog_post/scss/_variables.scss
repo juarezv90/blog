@@ -15,7 +15,7 @@ $sand:#b5ac9d;
 };
 
 @mixin lgscrn {
-    @media (min-width:1440px) {
+    @media (min-width:1439px) {
         @content;
     }
 }

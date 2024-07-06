@@ -1,0 +1,23 @@
+@import 'variables';
+
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 1rem;
+    gap: 1rem;
+    margin: 0 auto;
+
+    #quill-id_blog_post {
+        height: 200px;
+    }
+
+    @include mdscrn {
+        width: 500px;
+    }
+
+    @include lgscrn {
+        width: 800px;
+    }
+}

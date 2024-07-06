@@ -13,6 +13,7 @@ django = "==4.1"
 django-livereload-server = "*"
 django-quill-editor = "*"
 pillow = "*"
+mysqlclient = "*"
 
 [dev-packages]
 

@@ -1,62 +1,71 @@
 {% load static %}
 
-
 <header>
+  <div class="logotext">
+    <h1>Coffee</h1>
+    <h1>Coded</h1>
+    <div class="backdrop"></div>
+  </div>
 
-    <div class="logotext">
-        <h1>Coffee</h1>
-        <h1>Coded</h1>
-        <div class="backdrop"></div>
+  <nav>
+    <button class="sub_btn">Subscribe</button>
+
+    <div class="burger" id="burger" onclick="handleBurgerClick(this)">
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <div class="lines"></div>
+      <ul class="mobile_menu" id="menu" style="height: 0">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        {% comment %}
+        <li><a href="">Latest Post</a></li>
+        {% endcomment %} {% comment %}
+        <li><a href="">Recommended</a></li>
+        {% endcomment %}
+        <li><a href="">About</a></li>
+
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+
+        {% if perms.blog_post.publish_post %}
+        <li><a href="{% url 'post' %}">Post</a></li>
+        {% endif %} {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+      </ul>
     </div>
 
+    <ul class="reg_menu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      {% comment %}
+      <li><a href="">Latest Post</a></li>
+      {% endcomment %} {% comment %}
+      <li><a href="">Recommended</a></li>
+      {% endcomment %}
+      <li><a href="">About</a></li>
+      {% if user.is_authenticated %}
+      <li><a href="{% url 'logout' %}">Logout</a></li>
 
-    <nav>
-        <button class="sub_btn">
-            Subscribe
-        </button>
+      {% if perms.blog_post.publish_post %}
+      <li><a href="{% url 'post' %}">Post</a></li>
+      {% endif %} {% else %}
+      <li><a href="{% url 'login' %}">Login</a></li>
+      {% endif %}
+    </ul>
+  </nav>
 
-        <div class="burger" id="burger" onclick="handleBurgerClick(this)">
-            <div class="lines"></div>
-            <div class="lines"></div>
-            <div class="lines"></div>
-            <ul class="mobile_menu" id="menu" style="height: 0;">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="">Latest Post</a></li>
-                <li><a href="">Recommended</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'post' %}">Post</a></li>
-                {% endif %}
-            </ul>
-        </div>
+  <script>
+    const handleBurgerClick = () => {
+      const menu = document.getElementById("menu");
+      const items = document.getElementById("burger").children;
 
-        <ul class="reg_menu">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="">Latest Post</a></li>
-            <li><a href="">Recommended</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
-            {% if user.is_athenticated %}
-            <li><a href="{% url 'post' %}">Post</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-
-    <script>
-        const handleBurgerClick = (e) => {
-            const menu = document.getElementById("menu")
-            const items = document.getElementById("burger").children
-    
-            items[0].classList.toggle("hover1")
-            items[1].classList.toggle("hover2")
-            items[2].classList.toggle("hover3")
-            if (menu.style.height != "0px") {
-                menu.style.height = "0px"
-            } else {
-                menu.style.height = "14rem"
-            }
-        }
-    </script>
-
+      items[0].classList.toggle("hover1");
+      items[1].classList.toggle("hover2");
+      items[2].classList.toggle("hover3");
+      if (menu.style.height != "0px") {
+        menu.style.height = "0px";
+      } else {
+        menu.style.height = "auto";
+      }
+    };
+  </script>
 </header>

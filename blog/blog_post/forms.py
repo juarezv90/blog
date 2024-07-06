@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, ValidationError
 from .models import Blog_Post, Comment
 from django.contrib.auth.models import User
 

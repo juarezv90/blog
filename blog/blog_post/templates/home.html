@@ -13,7 +13,7 @@
 <section id="posts">
     {% for post in posts %}
     <article>
-        <img src="{{ post.post_image }}" alt="">
+        <img src="media/{{ post.post_image }}" alt="">
         <h3>{{ post.title }}</h3>
         <p class="publish">Published: {{ post.post_date }}</p>
         {{ post.blog_post.html|safe }}

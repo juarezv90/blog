@@ -71,14 +71,14 @@ h6 {
 }
 
 main {
-  height: calc(100% - 401px - 122px);
+  height: 100%;
 
   @include mdscrn {
-    height: calc(100% - 449px - 82px)
+    height: 100%;
   }
 
   @include lgscrn {
-    height: calc(100% - 449px - 82px)
+    height: 100%;
   }
 }
 
