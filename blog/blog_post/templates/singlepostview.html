@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="post_head">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.post_date }}</p>
+  </div>
+  <img src="{{ MEDIA_URL }}/{{ post.post_image }}" alt="" srcset="" />
+  <div>{{ post.blog_post.html|safe }}</div>
+
+  <section class="comments">
+    <h3>Comments:</h3>
+    {% for comment in comments %}
+    <article class="comment">
+ 	       <h4 style="text-transform:uppercase;">{{ comment.commentor.username }}</h4>
+         <p>{{comment.date_posted}}</p>
+         <p>{{ comment.comment_text}}</p>
+         <span>
+          {% if comment.likes.count == None %}
+            <p>No context</p>
+          {% endif %}
+         </span>
+    </article>
+    {% endfor %}
+  </section>
+{% endblock %}

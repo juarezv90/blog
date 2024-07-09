@@ -34,3 +34,8 @@ def upload_image(request):
 def Logoutview(request):
     logout(request)
     return redirect("/")
+
+def ViewSinglePost(request,pk):
+    post = models.Blog_Post.objects.get(pk=pk)
+    comments = post.comments.all()
+    return render(request=request, template_name="singlepostview.html", context={'post':post, 'comments': comments})

@@ -8,4 +8,5 @@ urlpatterns = [
     path("upload_image/", views.upload_image, name="upload_image"),
     path("login/", auth_views.LoginView.as_view(template_name="login.html", next_page="home"), name="login"),
     path("logout/", views.Logoutview, name="logout"),
+    path("post/<int:pk>", views.ViewSinglePost, name="postview"),
 ]
