@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.contrib.auth.decorators import permission_required
@@ -38,4 +39,13 @@ def Logoutview(request):
 def ViewSinglePost(request,pk):
     post = models.Blog_Post.objects.get(pk=pk)
     comments = post.comments.all()
-    return render(request=request, template_name="singlepostview.html", context={'post':post, 'comments': comments})
+    post_is_like = post.likes.filter(id=request.user.id).exists()
+    return render(request=request, template_name="singlepostview.html", context={'post':post, 'comments': comments, 'post_is_like': post_is_like})
+
+def BlogPostLike(request, pk):
+    post = models.Blog_Post.objects.get(pk=pk)
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+    else:
+        post.likes.add(request.user)
+    return redirect(reverse('postview', args=[str(pk)]))

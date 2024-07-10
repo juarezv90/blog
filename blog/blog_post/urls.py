@@ -9,4 +9,5 @@ urlpatterns = [
     path("login/", auth_views.LoginView.as_view(template_name="login.html", next_page="home"), name="login"),
     path("logout/", views.Logoutview, name="logout"),
     path("post/<int:pk>", views.ViewSinglePost, name="postview"),
+    path("post/likepost/<int:pk>", views.BlogPostLike, name="like_post")
 ]

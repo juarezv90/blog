@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Blog_Post,Comment,image_upload
 
+
 # Register your models here.
 
 
