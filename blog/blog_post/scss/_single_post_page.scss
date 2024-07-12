@@ -1,0 +1,110 @@
+@import "variables";
+
+#singledisplay {
+    padding: 1rem;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    #postimage {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        
+        @include mdscrn  {
+            height: 300px;
+            object-position: center 40%;
+        }
+        @include lgscrn {
+            height: 400px;
+            object-position: center 30%;
+        }
+    }
+
+    #likes {
+        button {
+            border: 1px solid $secondary;
+            background-color: $cta;
+            padding: 0 1rem;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: lighten($color: $cta, $amount: 10);
+            }
+        }
+
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        gap: 1rem;
+    }
+
+    #post {
+    // border: 1px solid $secondary;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    }
+}
+
+#comments {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    article {
+        padding: 1rem;
+        background-color: lighten($color: $lighter, $amount: 5);
+        border: 1px solid $sand;
+    }
+}
+
+#add_comment {
+    padding: 1rem;
+    max-width: 1440px;
+
+    button {
+        border: 1px solid $secondary;
+        background-color: $cta;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        
+        &:hover {
+            background-color: lighten($color: $cta, $amount: 10);
+        }
+    }
+
+    form {
+        display: grid;
+        gap: 1rem;
+
+        textarea {
+            height:100px;
+            resize: none;
+        }
+
+        button {
+            width: 300px;
+            text-transform: uppercase;
+            margin: 0 auto;
+            padding: .5rem 0;
+            cursor: pointer;
+            border: 1px solid $secondary;
+            background-color: $cta;
+
+            &:hover {
+                background-color: lighten($color: $cta, $amount: 10);
+            }
+
+        }
+
+    }
+
+    .hide {
+        display: none;
+    }
+}

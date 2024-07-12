@@ -3,12 +3,11 @@
 <style>
   main {
     padding: 3rem 0;
-    overflow: scroll;
   }
 </style>
 
 <form id="post-form" method="post" enctype="multipart/form-data">
-  {% csrf_token %} {{ form}}
+  {% csrf_token %} {{ form }}
   <button type="submit">Post</button>
 </form>
 

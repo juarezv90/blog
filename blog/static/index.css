@@ -622,4 +622,104 @@ section.welcome img {
   #post-form {
     width: 800px;
   }
+}
+
+#singledisplay {
+  padding: 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#singledisplay #postimage {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 744px) and (max-width: 1439px) {
+  #singledisplay #postimage {
+    height: 300px;
+    -o-object-position: center 40%;
+       object-position: center 40%;
+  }
+}
+@media (min-width: 1439px) {
+  #singledisplay #postimage {
+    height: 400px;
+    -o-object-position: center 30%;
+       object-position: center 30%;
+  }
+}
+#singledisplay #likes {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 1rem;
+}
+#singledisplay #likes button {
+  border: 1px solid #687c80;
+  background-color: #b6c2d0;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+#singledisplay #likes button:hover {
+  background-color: #d5dce4;
+}
+#singledisplay #post {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#comments {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#comments article {
+  padding: 1rem;
+  background-color: #e3ecf1;
+  border: 1px solid #b5ac9d;
+}
+
+#add_comment {
+  padding: 1rem;
+  max-width: 1440px;
+}
+#add_comment button {
+  border: 1px solid #687c80;
+  background-color: #b6c2d0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+#add_comment button:hover {
+  background-color: #d5dce4;
+}
+#add_comment form {
+  display: grid;
+  gap: 1rem;
+}
+#add_comment form textarea {
+  height: 100px;
+  resize: none;
+}
+#add_comment form button {
+  width: 300px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border: 1px solid #687c80;
+  background-color: #b6c2d0;
+}
+#add_comment form button:hover {
+  background-color: #d5dce4;
+}
+#add_comment .hide {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

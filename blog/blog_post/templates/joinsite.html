@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section id="joinblog">
+    <form action="" method="POST" id="login_form">
+        {% csrf_token %}
+        
+       {{ form.as_p }}
+        
+            
+        <button>submit</button>
+    </form>
+</section>
+
+{% endblock content %}
+    

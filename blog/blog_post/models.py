@@ -36,7 +36,7 @@ class Comment(models.Model):
     comment_text = models.TextField(max_length=1000, null=False)
     date_posted = models.DateField(auto_now=True)
     post = models.ForeignKey(Blog_Post, on_delete=models.CASCADE, related_name="comments")
-    commentor = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self) -> str:
-        return self.commentor.username + " " + str(self.date_posted)
+        return self.user.username + " " + str(self.date_posted)
