@@ -32,9 +32,9 @@ class AddUserForm(UserCreationForm):
         )
     def save(self, commit=True):
         user = super(AddUserForm, self).save(commit=False)
-        user.first_name = self.changed_data['first_name']
-        user.last_name = self.changed_data['last_name']
-        user.email = self.cleaned_data["email"]
+        user.first_name = self.data['first_name']
+        user.last_name = self.data['last_name']
+        user.email = self.data["email"]
         if commit:
             user.save()
         return user

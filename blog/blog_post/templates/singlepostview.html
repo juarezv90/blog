@@ -35,7 +35,7 @@
   <h3>Comments:</h3>
   {% for comment in comments %}
   <article class="comment">
-    <h4 style="text-transform: uppercase">{{ comment.user.username }}</h4>
+    <h4 style="text-transform: uppercase">{{ comment.user.first_name }}</h4>
     <p class="comment_date">{{comment.date_posted}}</p>
     <p class="comment_text">{{ comment.comment_text}}</p>
   </article>

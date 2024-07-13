@@ -22,6 +22,9 @@
 body {
   min-width: 375px;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -331,6 +334,7 @@ footer {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  margin-top: auto;
 }
 footer .socials {
   display: flex;
@@ -571,7 +575,7 @@ section.welcome img {
     margin: 0rem auto;
     gap: 1rem;
     padding: 2rem 1rem;
-    border: 4px solid #687c80;
+    border: 2px solid #687c80;
   }
   #login_form p {
     display: flex;
@@ -584,7 +588,7 @@ section.welcome img {
     margin: 0rem auto;
     gap: 1rem;
     padding: 2rem 1rem;
-    border: 4px solid #687c80;
+    border: 2px solid #687c80;
     background-color: #ccd9e2;
   }
 }
@@ -600,6 +604,31 @@ section.welcome img {
   margin-top: 2rem;
   width: 200px;
   padding: 8px;
+  cursor: pointer;
+}
+#login_form #sign_up {
+  color: #687c80;
+  -webkit-text-decoration: #3a4548;
+          text-decoration: #3a4548;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#login_form #sign_up:hover {
+  color: #b6c2d0;
+}
+
+#joinblog {
+  margin: 2rem auto;
+}
+@media (min-width: 1439px) {
+  #joinblog #login_form {
+    width: 600px;
+  }
+  #joinblog #login_form input {
+    width: 400px;
+    padding: 5px 10px;
+  }
 }
 
 #post-form {

@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
+
+
 <style>
-    main {
-        padding: 2rem 0;
-    }
+  main {
+    padding: 2rem 0;
+  }
 </style>
 
+<form method="post" id="login_form">
+  <h1>Login</h1>
+  {% csrf_token %} {{ form.as_p }}
 
-<form method="post" id="login_form" >
-    <h1>Login</h1>
-    {% csrf_token %}
-    {{ form.as_p }}
+  <button type="submit">Login</button>
 
-<button type="submit">Login</button>
+  <a href="{% url 'signup' %}" id="sign_up" >Sign up</a>
 </form>
-    
+
 {% endblock content %}
-    
