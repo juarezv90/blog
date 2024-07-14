@@ -29,9 +29,6 @@ class image_upload(models.Model):
     image = models.ImageField(upload_to="images/", null=True, blank=True)
     uploaded = models.DateField(auto_now=True)
 
-    def __str__(self) -> str:
-        return self.image
-
 class Comment(models.Model):
     comment_text = models.TextField(max_length=1000, null=False)
     date_posted = models.DateField(auto_now=True)

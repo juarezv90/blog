@@ -71,20 +71,6 @@ h6 {
   isolation: isolate;
 }
 
-main {
-  height: 100%;
-}
-@media (min-width: 744px) and (max-width: 1439px) {
-  main {
-    height: 100%;
-  }
-}
-@media (min-width: 1439px) {
-  main {
-    height: 100%;
-  }
-}
-
 *, *::after, *::before, a, li {
   font-family: "poppins";
 }
@@ -634,28 +620,32 @@ section.welcome img {
 #post-form {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 100%;
   padding: 1rem;
   gap: 1rem;
   margin: 0 auto;
 }
-#post-form #quill-id_blog_post {
-  height: 200px;
+#post-form #id_title {
+  width: 300px;
 }
-@media (min-width: 744px) and (max-width: 1439px) {
-  #post-form {
-    width: 500px;
-  }
+#post-form button.post {
+  width: 200px;
+  margin: 0 auto;
+}
+#post-form #quill-id_blog_post {
+  min-height: 400px;
+  height: 100%;
 }
 @media (min-width: 1439px) {
   #post-form {
-    width: 800px;
+    max-width: 1440px;
   }
 }
 
 #singledisplay {
   padding: 1rem;
   max-width: 1440px;
+  height: auto;
   margin: 0 auto;
 }
 #singledisplay #postimage {
@@ -700,6 +690,8 @@ section.welcome img {
 #singledisplay #post {
   padding: 1rem;
   margin-bottom: 1rem;
+  height: auto;
+  overflow: hidden;
 }
 
 #comments {

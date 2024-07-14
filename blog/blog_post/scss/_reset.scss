@@ -73,18 +73,6 @@ h6 {
   isolation: isolate;
 }
 
-main {
-  height: 100%;
-
-  @include mdscrn {
-    height: 100%;
-  }
-
-  @include lgscrn {
-    height: 100%;
-  }
-}
-
 *, *::after , *::before, a, li {
   font-family: "poppins";
 }

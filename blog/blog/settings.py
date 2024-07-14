@@ -149,12 +149,17 @@ QUILL_CONFIGS = {
     'default': {
         'theme':'snow',
         'modules':{
+            'imageResize': {
+                'displaySize':True,
+            },
             'toolbar':[
-                [{'header':[1,2,False] }],
+                [{'font':[]}],
+                [{'header':[1,2,3,4,5,6,False] }],
                 ['bold','italic','underline'],
-                ['image','code-block'],
-                [{'list':'ordered'},{'list':'bullet'}, {'list':'check'}]
-            ]
+                ['image','code-block','link'],
+                [{'list':'ordered'},{'list':'bullet'}, {'list':'check'}],
+                ['clean'],
+            ],
         }
     }
 }
