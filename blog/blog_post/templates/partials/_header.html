@@ -61,10 +61,14 @@
       items[0].classList.toggle("hover1");
       items[1].classList.toggle("hover2");
       items[2].classList.toggle("hover3");
+
+      const menu_items = menu.children
+      const menuItemsHeight = menu_items[0].scrollHeight;
+
       if (menu.style.height != "0px") {
         menu.style.height = "0px";
       } else {
-        menu.style.height = "auto";
+        menu.style.height = menuItemsHeight * menu_items.length + "px";
       }
     };
   </script>

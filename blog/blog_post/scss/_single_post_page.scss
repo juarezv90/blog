@@ -40,6 +40,17 @@
         justify-content: start;
         align-items: end;
         gap: 1rem;
+
+        .likes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+        }
+        svg {
+            width: 30px;
+            aspect-ratio: 1/1;
+        }
     }
 
     #post {

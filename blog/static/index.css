@@ -106,7 +106,7 @@ header nav {
   position: absolute;
   display: flex;
   bottom: 0;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0.5rem;
 }
 header nav .reg_menu {
@@ -686,6 +686,16 @@ section.welcome img {
 }
 #singledisplay #likes button:hover {
   background-color: #d5dce4;
+}
+#singledisplay #likes .likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+#singledisplay #likes svg {
+  width: 30px;
+  aspect-ratio: 1/1;
 }
 #singledisplay #post {
   padding: 1rem;

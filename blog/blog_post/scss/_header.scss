@@ -31,8 +31,10 @@ header {
         position: absolute;
         display: flex;
         bottom: 0;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding: .5rem;
+
+
 
         .reg_menu {
             display: none;
