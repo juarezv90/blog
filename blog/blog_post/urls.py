@@ -10,5 +10,6 @@ urlpatterns = [
     path("post/<int:pk>", views.ViewSinglePost, name="postview"),
     path("post/likepost/<int:pk>", views.BlogPostLike, name="like_post"),
     path("post-comment/<int:pk>", views.AddComment, name="addcomment"),
-    path("signup/", views.CreateUser, name="signup")
+    path("signup/", views.CreateUser, name="signup"),
+    path("dashboard/", views.DashboardView, name='dashboard'),
 ]

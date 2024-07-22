@@ -25,7 +25,7 @@
 
         {% if user.is_authenticated %}
         <li><a href="{% url 'logout' %}">Logout</a></li>
-
+        <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
         {% if perms.blog_post.publish_post %}
         <li><a href="{% url 'post' %}">Post</a></li>
         {% endif %} {% else %}
@@ -44,6 +44,7 @@
       <li><a href="">About</a></li>
       {% if user.is_authenticated %}
       <li><a href="{% url 'logout' %}">Logout</a></li>
+      <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
 
       {% if perms.blog_post.publish_post %}
       <li><a href="{% url 'post' %}">Post</a></li>
@@ -62,7 +63,7 @@
       items[1].classList.toggle("hover2");
       items[2].classList.toggle("hover3");
 
-      const menu_items = menu.children
+      const menu_items = menu.children;
       const menuItemsHeight = menu_items[0].scrollHeight;
 
       if (menu.style.height != "0px") {

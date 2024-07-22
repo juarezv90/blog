@@ -720,6 +720,7 @@ section.welcome img {
 #add_comment {
   padding: 1rem;
   max-width: 1440px;
+  margin: 0 auto;
 }
 #add_comment button {
   border: 1px solid #687c80;

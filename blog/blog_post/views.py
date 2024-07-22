@@ -86,3 +86,6 @@ def CreateUser(request):
     else:
         form = AddUserForm()
     return render(request, "joinsite.html", {'form':form})
+
+def DashboardView(request):
+    pass
